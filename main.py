@@ -1,22 +1,14 @@
 import pygame as pg
 import random as rn
 
-
 class MatrixLetters:
     def __init__(self, app):
         self.app = app
-
-        # self.letters = '1234567890000001111111'
-        # self.font_size = 16
-        # self.font = pg.font.SysFont('arial',self.font_size, bold = True)
 
         self.letters = [chr(int('0x30a0', 16) + i) for i in range(1, 95)]
         self.font_size = 15
         self.font = pg.font.SysFont('ms mincho', self.font_size, bold=True)
         self.font = pg.font.Font('MS Mincho.ttf', self.font_size, bold=True)
-
-        # self.colums = app.WIDTH // self.font_size
-        # self.drops = [1 for i in range(0,self.colums)]
 
     def draw(self):
         for i in range(0,len(self.drops)):
@@ -30,8 +22,6 @@ class MatrixLetters:
 
     def run(self):
         self.draw()
-
-
 
 class MatrixApp:
     def __init__(self): # инициализация приложения
@@ -53,7 +43,6 @@ class MatrixApp:
             [exit() for i in pg.event.get() if i.type == pg.QUIT]
             pg.display.flip() #обновление поверхности
             self.clock.tick(15) # установка кадров
-
 
 if __name__ == '__main__':
     app = MatrixApp()
