@@ -4,14 +4,14 @@ class MatrixLetters:
     def __init__(self, app):
         self.app = app
 
-        # self.letters = '1234567890000001111111'
-        # self.font_size = 16
-        # self.font = pg.font.SysFont('arial',self.font_size, bold = True)
+        self.letters = '1234567890000001111111'
+        self.font_size = 16
+        self.font = pg.font.SysFont('arial',self.font_size, bold = True)
 
-        self.letters = [chr(int('0x30a0', 16) + i) for i in range(1, 95)]
-        self.font_size = 15
+        # self.letters = [chr(int('0x30a0', 16) + i) for i in range(1, 95)]
+        # self.font_size = 15
         # self.font = pg.font.SysFont('ms mincho', self.font_size, bold=True)
-        self.font = pg.font.Font('MS Mincho.ttf', self.font_size, bold=True)
+        # self.font = pg.font.Font('MS Mincho.ttf', self.font_size, bold=True)
 
         self.colums = app.WIDTH // self.font_size
         self.drops = [1 for i in range(0,self.colums)]
