@@ -1,13 +1,14 @@
 import pygame as pg
 import random as rn
 
+
 class MatrixLetters:
     def __init__(self, app):
         self.app = app
 
-        self.letters = '1234567890000001111111'
-        self.font_size = 16
-        self.font = pg.font.SysFont('arial',self.font_size, bold = True)
+        # self.letters = '1234567890000001111111'
+        # self.font_size = 16
+        # self.font = pg.font.SysFont('arial',self.font_size, bold = True)
 
         self.letters = [chr(int('0x30a0', 16) + i) for i in range(1, 95)]
         self.font_size = 15
