@@ -1,5 +1,6 @@
 import pygame as pg
 import random as rn
+
 class MatrixLetters:
     def __init__(self, app):
         self.app = app
